@@ -1,3 +1,4 @@
+/* Reset some default styles for consistency */
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +6,11 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif; /* Use system default font for consistency */
     background-color: #f4f4f4;
-    color: #333;
+    color: #333; /* Dark text for good contrast */
     line-height: 1.6;
+    padding-bottom: 50px; /* To prevent footer from covering content */
 }
 
 .container {
@@ -17,59 +19,99 @@ body {
     padding: 20px 0;
 }
 
+/* Header Styling */
 header {
-    background-color: #0073e6;
+    background-color: #0073e6; /* Professional blue color */
     color: white;
-    padding: 30px 0;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #005bb5; /* Subtle bottom border */
 }
 
 .profile {
     display: flex;
+    flex-direction: column; /* Stack content vertically on smaller screens */
     align-items: center;
-    justify-content: space-between;
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.profile-info {
+    text-align: center; /* Centered text to match profile image */
 }
 
 .profile-info h1 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: 2em;
 }
 
 .profile-info p {
     margin-bottom: 5px;
 }
 
+/* Section Headings */
 h2 {
-    margin-bottom: 10px;
-    border-bottom: 2px solid #0073e6;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #0073e6; /* Professional underline */
     padding-bottom: 5px;
 }
 
+/* Content Sections */
 section {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.job {
+    margin-bottom: 15px;
+}
+
+.job h3 {
+    font-size: 1.3em;
+    color: #0073e6;
+}
+
+.job p {
+    margin: 5px 0;
+    font-size: 1em;
 }
 
 .job ul {
+    margin-left: 20px;
     list-style-type: disc;
+}
+
+ul {
     margin-left: 20px;
 }
 
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Footer Styling */
 footer {
-    text-align: center;
-    padding: 20px 0;
     background-color: #0073e6;
     color: white;
+    text-align: center;
+    padding: 10px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+    border-top: 2px solid #005bb5;
 }
 
+footer p {
+    font-size: 0.9em;
+}
+
+/* Links */
 a {
     color: #0073e6;
     text-decoration: none;
@@ -78,3 +120,16 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .profile {
+        flex-direction: row; /* Display profile info and image side by side on larger screens */
+        justify-content: space-between;
+    }
+    
+    .profile-info {
+        text-align: left;
+    }
+}
+
