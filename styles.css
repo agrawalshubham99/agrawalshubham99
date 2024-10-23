@@ -5,50 +5,49 @@
 }
 
 body {
-    font-family: Arial, sans-serif; /* Default system font */
-    background-color: #ffffff; /* Plain white background */
-    color: #000000; /* Black text for readability */
-    line-height: 1.5; /* Improve readability */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
 .container {
     width: 80%;
-    margin: 20px auto; /* Center content and add top/bottom margin */
-    padding: 20px;
+    margin: auto;
+    padding: 20px 0;
 }
 
 header {
-    padding: 20px;
-    background-color: #f0f0f0; /* Light grey background */
-    border-bottom: 1px solid #ccc; /* Subtle border to separate header */
+    background-color: #0073e6;
+    color: white;
+    padding: 30px 0;
 }
 
 .profile {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%; /* Circular photo */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     object-fit: cover;
     margin-right: 20px;
 }
 
 .profile-info h1 {
-    font-size: 1.8em;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .profile-info p {
-    font-size: 1.1em;
+    margin-bottom: 5px;
 }
 
 h2 {
-    font-size: 1.5em;
     margin-bottom: 10px;
-    border-bottom: 2px solid #000; /* Simple underline */
+    border-bottom: 2px solid #0073e6;
     padding-bottom: 5px;
 }
 
@@ -57,23 +56,25 @@ section {
 }
 
 .job ul {
+    list-style-type: disc;
     margin-left: 20px;
-    list-style-type: disc; /* Simple bullet points */
 }
 
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #f0f0f0; /* Same background as header */
-    margin-top: 20px;
-    border-top: 1px solid #ccc;
+    padding: 20px 0;
+    background-color: #0073e6;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 a {
-    color: #0000ee; /* Default link color */
-    text-decoration: none; /* Remove underline by default */
+    color: #0073e6;
+    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
