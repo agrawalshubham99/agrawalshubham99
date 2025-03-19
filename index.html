@@ -1,182 +1,214 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Shubham Agrawal | Resume</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = { darkMode: "class" };
-    </script>
-    <!-- AOS Animation -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
-  <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200">
-    <!-- Header/Navbar -->
-    <header class="fixed top-0 w-full bg-white dark:bg-gray-900 shadow z-50">
-      <nav class="max-w-4xl mx-auto flex justify-between items-center p-4">
-        <a href="#home" class="text-2xl font-bold">Shubham Agrawal</a>
-        <ul class="hidden md:flex space-x-6">
-          <li><a href="#home" class="hover:text-blue-500">Home</a></li>
-          <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
-          <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
-          <li>
-            <a href="#experience" class="hover:text-blue-500">Experience</a>
-          </li>
-          <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
-          <li>
-            <a
-              href="assets/Shubham_Agrawal_Resume.pdf"
-              download
-              class="text-blue-600 font-semibold"
-              >Download Résumé</a
-            >
-          </li>
-        </ul>
-        <button id="themeToggle" class="p-2 rounded focus:outline-none">
-          <span class="dark:hidden">🌞</span>
-          <span class="hidden dark:inline">🌙</span>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Shubham Agrawal</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
-      </nav>
-    </header>
-
-    <!-- Home -->
-    <section
-      id="home"
-      class="min-h-screen flex flex-col justify-center items-center text-center bg-gray-100 dark:bg-gray-800 pt-20"
-    >
-      <img
-        src="assets/profile.jpg"
-        alt="Profile"
-        class="w-40 h-40 rounded-full shadow-lg mb-4"
-      />
-      <h1 class="text-4xl md:text-6xl font-bold">Shubham Agrawal</h1>
-      <p class="text-xl md:text-2xl mb-6">
-        Mobile Developer | MERN Stack Developer
-      </p>
-      <a
-        href="assets/Shubham_Agrawal_Resume.pdf"
-        download
-        class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700"
-        >Download My Résumé</a
-      >
-    </section>
-
-    <!-- Skills -->
-    <section
-      id="skills"
-      class="py-16 bg-white dark:bg-gray-900"
-      data-aos="fade-up"
-    >
-      <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
-      <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
-        <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full"
-          >JavaScript</span
-        >
-        <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full"
-          >React.js</span
-        >
-        <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full"
-          >Node.js</span
-        >
-        <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full"
-          >Express.js</span
-        >
-        <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full"
-          >MongoDB</span
-        >
-        <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full"
-          >Tailwind</span
-        >
-        <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full"
-          >Python</span
-        >
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section
-      id="projects"
-      class="py-16 bg-gray-100 dark:bg-gray-800"
-      data-aos="fade-up"
-    >
-      <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
-      <div
-        class="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4"
-      >
-        <div
-          class="bg-white dark:bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-        >
-          <img
-            src="assets/project1.png"
-            alt="Wanderlust"
-            class="rounded-t-lg"
-          />
-          <div class="p-4">
-            <h3 class="text-xl font-semibold">Wanderlust</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">
-              Express, Node.js, MongoDB, EJS technology based property listing
-              website.
-            </p>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-primary fw-bold"
+                href="assets/Shubham_Agrawal_Resume.pdf"
+                download
+              >
+                Download Résumé
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <!-- Experience -->
-    <section
-      id="experience"
-      class="py-16 bg-white dark:bg-gray-900"
-      data-aos="fade-up"
-    >
-      <h2 class="text-3xl font-bold text-center mb-8">Experience</h2>
-      <div class="max-w-4xl mx-auto px-4">
-        <h3 class="text-2xl font-semibold">
-          Programmer - Tata Consultancy Services
-        </h3>
-        <p class="text-gray-500">Dec 2021 – Dec 2023</p>
-        <p class="mt-2">
-          Worked on MERN Stack focusing on MySQL for NielsenIQ project.
-        </p>
+    <!-- Main Content -->
+    <main class="pt-5" style="padding-top: 80px">
+      <!-- Home Section -->
+      <section id="home" class="container text-center py-5">
+        <img
+          src="assets/profile.jpg"
+          alt="Profile Picture"
+          class="rounded-circle shadow mb-3"
+          style="width: 150px; height: 150px"
+        />
+        <h1 class="display-4">Shubham Agrawal</h1>
+        <p class="lead">Mobile Developer | MERN Stack Developer</p>
+        <a
+          href="assets/Shubham_Agrawal_Resume.pdf"
+          download
+          class="btn btn-primary btn-lg"
+        >
+          Download My Résumé
+        </a>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="mb-4 text-center">Skills</h2>
+          <div class="row justify-content-center">
+            <div class="col-6 col-md-3 mb-3">
+              <div class="p-2 border rounded text-center">JavaScript</div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <div class="p-2 border rounded text-center">React.js</div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <div class="p-2 border rounded text-center">Node.js</div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <div class="p-2 border rounded text-center">Express.js</div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <div class="p-2 border rounded text-center">MongoDB</div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <div class="p-2 border rounded text-center">Python</div>
+            </div>
+            <!-- Add more skills as needed -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="py-5">
+        <div class="container">
+          <h2 class="mb-4 text-center">Projects</h2>
+          <div class="row">
+            <!-- Project Card Example -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="assets/project1.png"
+                  class="card-img-top"
+                  alt="Project Screenshot"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Spotify Clone</h5>
+                  <p class="card-text">
+                    A basic music playback simulation using HTML, CSS, and
+                    JavaScript.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Add more project cards as needed -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="mb-4 text-center">Experience</h2>
+          <div class="mb-4">
+            <h4>Programmer - Tata Consultancy Services</h4>
+            <p class="text-muted">Dec 2021 – Dec 2023</p>
+            <p>
+              Worked on MERN Stack projects with a focus on database
+              technologies for the NielsenIQ project.
+            </p>
+          </div>
+          <!-- Add more experience entries as needed -->
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-5">
+        <div class="container">
+          <h2 class="mb-4 text-center">Get in Touch</h2>
+          <form
+            action="https://formsubmit.co/your-email@example.com"
+            method="POST"
+            class="mx-auto"
+            style="max-width: 600px"
+          >
+            <!-- Replace your-email@example.com with your actual email -->
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="form-control"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-3 bg-dark text-light text-center">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 Shubham Agrawal. All rights reserved.</p>
       </div>
-    </section>
+    </footer>
 
-    <!-- Contact -->
-    <section
-      id="contact"
-      class="py-16 bg-gray-100 dark:bg-gray-800"
-      data-aos="fade-up"
-    >
-      <h2 class="text-3xl font-bold text-center mb-8">Get in Touch</h2>
-      <form action="#" method="POST" class="max-w-lg mx-auto px-4">
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          class="w-full p-2 rounded mb-4 dark:bg-gray-700"
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          class="w-full p-2 rounded mb-4 dark:bg-gray-700"
-        />
-        <textarea
-          name="message"
-          placeholder="Message"
-          class="w-full p-2 rounded mb-4 dark:bg-gray-700"
-        ></textarea>
-        <button class="bg-blue-600 text-white px-6 py-2 rounded">
-          Send Message
-        </button>
-      </form>
-    </section>
-
-    <!-- Scripts -->
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS (if needed) -->
     <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>
