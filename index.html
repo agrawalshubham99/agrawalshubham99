@@ -1,81 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shubham Agrawal | Resume</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="profile">
-                <img src="profile.jpg" alt="Shubham Agrawal's Photo" class="profile-pic">
-                <div class="profile-info">
-                    <h1>Shubham Agrawal</h1>
-                    <p>Software Developer</p>
-                    <p><strong>Location:</strong> Toronto, Canada | <strong>Phone:</strong> +1 (647) 354-9753 | <strong>Email:</strong> <a style = "color: black;" href="mailto:sa280337@gmail.com">sa280337@gmail.com</a></p>
-                </div>
-            </div>
-        </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  </head>
+  <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+    <!-- Header/Navbar -->
+    <header class="fixed top-0 w-full bg-white dark:bg-gray-900 shadow z-50">
+      <nav class="max-w-4xl mx-auto flex justify-between items-center p-4">
+        <a href="#home" class="text-2xl font-bold">Shubham Agrawal</a>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+          <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+          <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+          <li>
+            <a href="#experience" class="hover:text-blue-500">Experience</a>
+          </li>
+          <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+          <li>
+            <a
+              href="assets/Shubham_Agrawal_Resume.pdf"
+              download
+              class="text-blue-600 font-semibold"
+              >Download Résumé</a
+            >
+          </li>
+        </ul>
+        <button id="themeToggle" class="p-2 rounded focus:outline-none">
+          <span class="dark:hidden">🌞</span>
+          <span class="hidden dark:inline">🌙</span>
+        </button>
+      </nav>
     </header>
 
-    <section id="summary" class="container">
-        <h2>Professional Summary</h2>
-        <p>Software Developer with 3 years of experience, adept at both digital marketing and software development. Excels in managing online platforms, formulating comprehensive social media strategies, and fostering cross-functional collaborations for innovative software solutions.</p>
+    <!-- Home -->
+    <section
+      id="home"
+      class="min-h-screen flex flex-col justify-center items-center text-center bg-gray-100 dark:bg-gray-800 pt-20"
+    >
+      <img
+        src="assets/profile.jpg"
+        alt="Profile"
+        class="w-40 h-40 rounded-full shadow-lg mb-4"
+      />
+      <h1 class="text-4xl md:text-6xl font-bold">Shubham Agrawal</h1>
+      <p class="text-xl md:text-2xl mb-6">
+        Mobile Developer | MERN Stack Developer
+      </p>
+      <a
+        href="assets/Shubham_Agrawal_Resume.pdf"
+        download
+        class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700"
+        >Download My Résumé</a
+      >
     </section>
 
-    <section id="experience" class="container">
-        <h2>Employment History</h2>
-        <div class="job">
-            <h3>Digital Marketer</h3>
-            <p>Professional Book Fairs, Toronto | JAN 2024 - Present</p>
-            <ul>
-                <li>Managed digital marketing efforts for the store specializing in books.</li>
-                <li>Developed a comprehensive social media strategy to increase brand awareness.</li>
-            </ul>
+    <!-- Skills -->
+    <section
+      id="skills"
+      class="py-16 bg-white dark:bg-gray-900"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
+      <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
+        <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full"
+          >JavaScript</span
+        >
+        <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full"
+          >React.js</span
+        >
+        <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full"
+          >Node.js</span
+        >
+        <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full"
+          >Express.js</span
+        >
+        <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full"
+          >MongoDB</span
+        >
+        <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full"
+          >Tailwind</span
+        >
+        <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full"
+          >Python</span
+        >
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section
+      id="projects"
+      class="py-16 bg-gray-100 dark:bg-gray-800"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
+      <div
+        class="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4"
+      >
+        <div
+          class="bg-white dark:bg-gray-700 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+        >
+          <img
+            src="assets/project1.png"
+            alt="Wanderlust"
+            class="rounded-t-lg"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Wanderlust</h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">
+              Express, Node.js, MongoDB, EJS technology based property listing
+              website.
+            </p>
+          </div>
         </div>
-        <div class="job">
-            <h3>Programmer</h3>
-            <p>Tata Consultancy Services, Gandhinagar | DEC 2021 - DEC 2023</p>
-            <ul>
-                <li>Collaborated with cross-functional teams to gather requirements and design solutions.</li>
-                <li>Developed innovative software solutions to meet client needs and improve business efficiency.</li>
-            </ul>
-        </div>
+      </div>
     </section>
 
-    <section id="education" class="container">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Mobile Solutions Development</strong> | Conestoga College, Waterloo | JAN 2024 - Present</li>
-            <li><strong>Computer Operator and Programming Assistant (COPA)</strong> | ITI NCVT, Guna | JUL 2020 - MAR 2021</li>
-            <li><strong>Bachelor of Science in Computer Science</strong> | Jiwaji University, Guna | APR 2017 - MAR 2020</li>
-        </ul>
+    <!-- Experience -->
+    <section
+      id="experience"
+      class="py-16 bg-white dark:bg-gray-900"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-bold text-center mb-8">Experience</h2>
+      <div class="max-w-4xl mx-auto px-4">
+        <h3 class="text-2xl font-semibold">
+          Programmer - Tata Consultancy Services
+        </h3>
+        <p class="text-gray-500">Dec 2021 – Dec 2023</p>
+        <p class="mt-2">
+          Worked on MERN Stack focusing on MySQL for NielsenIQ project.
+        </p>
+      </div>
     </section>
 
-    <section id="skills" class="container">
-        <h2>Skills</h2>
-        <ul>
-            <li>UI/UX Design</li>
-            <li>Python</li>
-            <li>Business Analysis</li>
-            <li>Software Development</li>
-            <li>Digital Marketing</li>
-            <li>Agile Methodology</li>
-        </ul>
+    <!-- Contact -->
+    <section
+      id="contact"
+      class="py-16 bg-gray-100 dark:bg-gray-800"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-bold text-center mb-8">Get in Touch</h2>
+      <form action="#" method="POST" class="max-w-lg mx-auto px-4">
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          class="w-full p-2 rounded mb-4 dark:bg-gray-700"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          class="w-full p-2 rounded mb-4 dark:bg-gray-700"
+        />
+        <textarea
+          name="message"
+          placeholder="Message"
+          class="w-full p-2 rounded mb-4 dark:bg-gray-700"
+        ></textarea>
+        <button class="bg-blue-600 text-white px-6 py-2 rounded">
+          Send Message
+        </button>
+      </form>
     </section>
 
-    <section id="contact" class="container">
-        <h2>Contact Information</h2>
-        <p><strong>Phone:</strong> +1 (647) 354-9753</p>
-        <p><strong>Email:</strong> <a href="mailto:sa280337@gmail.com">sa280337@gmail.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/agrawalshubham99/">agrawalshubham99</a></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Shubham Agrawal. All Rights Reserved.</p>
-    </footer>
-</body>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
