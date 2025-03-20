@@ -9,6 +9,11 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
       /* Enable smooth scrolling */
       html {
@@ -46,7 +51,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
             <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
             <li class="nav-item">
               <a class="nav-link" href="#skills">Skills</a>
@@ -67,6 +72,27 @@
                 download
               >
                 Download Résumé
+              </a>
+            </li>
+            <!-- GitHub and LinkedIn Icons -->
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://github.com/agrawalshubham99"
+                target="_blank"
+                title="GitHub"
+              >
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://linkedin.com/in/agrawalshubham99"
+                target="_blank"
+                title="LinkedIn"
+              >
+                <i class="fab fa-linkedin fa-lg"></i>
               </a>
             </li>
           </ul>
@@ -128,22 +154,27 @@
         <div class="container">
           <h2 class="mb-4 text-center">Projects</h2>
           <div class="row">
-            <!-- Project Card Example -->
+            <!-- Project Card: Wanderlust -->
             <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card h-100 shadow-sm">
-                <img
-                  src="assets/project1.png"
-                  class="card-img-top"
-                  alt="Project Screenshot"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Spotify Clone</h5>
-                  <p class="card-text">
-                    A basic music playback simulation using HTML, CSS, and
-                    JavaScript.
-                  </p>
+              <a
+                href="https://wanderlust.agrawalshubham99.com"
+                target="_blank"
+                class="text-decoration-none text-reset"
+              >
+                <div class="card h-100 shadow-sm">
+                  <img
+                    src="assets/project1.png"
+                    class="card-img-top"
+                    alt="Wanderlust Project Screenshot"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Wanderlust</h5>
+                    <p class="card-text">
+                      A travel listing web app for exploring destinations.
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <!-- Add more project cards as needed -->
           </div>
@@ -168,47 +199,15 @@
 
       <!-- Contact Section -->
       <section id="contact" class="py-5">
-        <div class="container">
-          <h2 class="mb-4 text-center">Get in Touch</h2>
-          <form
-            action="https://formsubmit.co/your-email@example.com"
-            method="POST"
-            class="mx-auto"
-            style="max-width: 600px"
+        <div class="container text-center">
+          <h2 class="mb-4">Connect with Me</h2>
+          <a
+            href="https://wa.me/+16473549753"
+            target="_blank"
+            class="btn btn-success btn-lg"
           >
-            <!-- Replace your-email@example.com with your actual email -->
-            <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="form-control"
-                required
-              />
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="form-control"
-                required
-              />
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                class="form-control"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
+            Connect on WhatsApp
+          </a>
         </div>
       </section>
     </main>
